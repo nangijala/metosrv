@@ -1,0 +1,19 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    title= title
+    meta(name="description" content="")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(href="https://fonts.googleapis.com/css?family=Old+Standard+TT:700" rel="stylesheet")
+    link(href="/static/style.css" rel="stylesheet")
+  body
+    h1= message
+    form(action="/test", method="post")
+        input#name(type="text", name="name")
+        input#email(type="text", name="email")
+        div
+            label Check1
+                input(type="checkbox", name="chk1")
+        button(type="submit") Submit
+  div.temp(class=color)= temp
