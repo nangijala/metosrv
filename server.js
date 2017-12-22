@@ -23,11 +23,11 @@ app.get('/', function (req, res) {
   var colorClass = ""
   if( tempOutside < 0)
     colorClass = "cold"
-  var tags = { innen: `Innen: ${obj.innen} °C`, color : colorClass, aussen: `Aussen: ${temp} °C`, created: obj.created, message: 'Hello there!' }
+  var tags = { innen: `Innen: ${obj.innen} °C`, color : colorClass, aussen: `Aussen: ${tempOutside} °C`, created: obj.created, message: 'Hello there!' }
   res.render('index',tags)    
 });
 
 const port = 8000;
-app.listen(port, () => {
+app.listen(port, "raspberrypiz.home",  () => {
   console.log('We are live on ' + port);
 });
